@@ -12,6 +12,17 @@
 </head>
 <body>
 
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Cursor spotlight -->
+  <div id="cursor-spotlight"></div>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
   <!-- ─── NAVBAR ─────────────────────────────────────────────────── -->
   <nav id="navbar">
     <div class="nav-inner">
@@ -39,7 +50,7 @@
     <div class="hero-content fade-in-up">
       <p class="hero-greeting">Hey there, I'm</p>
       <h1 class="hero-name">Rameswar Nayak</h1>
-      <p class="hero-title">Duck Creek Developer &amp; Software Engineer</p>
+      <p class="hero-title"><span id="typewriter"></span><span class="typewriter-cursor">|</span></p>
       <p class="hero-exp">4+ Years of Experience &nbsp;·&nbsp; Currently at <a href="https://www.chubb.com/us-en/" target="_blank" rel="noopener" class="hero-company-link">CHUBB</a></p>
       <p class="hero-location">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -53,6 +64,30 @@
     <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
       <span class="scroll-arrow"></span>
     </a>
+  </section>
+
+  <!-- ─── STATS ───────────────────────────────────────────────────── -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card fade-in-up">
+          <span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span>
+          <p class="stat-label">Years Experience</p>
+        </div>
+        <div class="stat-card fade-in-up">
+          <span class="stat-number" data-target="4">0</span><span class="stat-suffix"></span>
+          <p class="stat-label">Industry Projects</p>
+        </div>
+        <div class="stat-card fade-in-up">
+          <span class="stat-number" data-target="3">0</span><span class="stat-suffix"></span>
+          <p class="stat-label">Duck Creek Modules</p>
+        </div>
+        <div class="stat-card fade-in-up">
+          <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+          <p class="stat-label">Technologies</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ─── ABOUT ─────────────────────────────────────────────────── -->
