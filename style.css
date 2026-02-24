@@ -298,6 +298,23 @@ ul { list-style: none; }
   font-weight: 400;
 }
 
+.hero-exp {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.hero-company-link {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-company-link:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
 .hero-location {
   display: inline-flex;
   align-items: center;
