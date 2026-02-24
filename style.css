@@ -124,7 +124,7 @@ ul { list-style: none; }
   right: 0;
   z-index: 1000;
   height: var(--nav-height);
-  background: rgba(13, 17, 23, 0.85);
+  background: rgba(13, 17, 23, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
@@ -409,7 +409,7 @@ section {
 #hero { padding-top: 0; padding-bottom: 0; }
 
 section:nth-child(even) {
-  background: var(--color-bg-secondary);
+  background: rgba(22, 27, 34, 0.72);
 }
 
 .section-title {
@@ -756,7 +756,7 @@ section:nth-child(even) {
 
 /* ─── FOOTER ─────────────────────────────────────────────────────── */
 #footer {
-  background: var(--color-bg-secondary);
+  background: rgba(22, 27, 34, 0.85);
   border-top: 1px solid var(--color-border);
   padding: var(--space-xl) 0;
 }
@@ -793,7 +793,7 @@ section:nth-child(even) {
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.55;
+  opacity: 1;
 }
 
 /* Ensure all content sits above the canvas */
@@ -883,7 +883,7 @@ footer,
 
 /* ─── STATS SECTION ──────────────────────────────────────────────── */
 #stats {
-  background: var(--color-bg-secondary);
+  background: rgba(22, 27, 34, 0.72);
   padding: var(--space-2xl) 0;
 }
 
