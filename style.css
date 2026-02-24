@@ -466,6 +466,12 @@ section:nth-child(even) {
   backdrop-filter: blur(8px);
 }
 
+.npm-sidebar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .npm-avatar-wrap {
   display: flex;
   justify-content: center;
@@ -1290,22 +1296,73 @@ footer,
   /* Profile — full single column */
   .profile-container {
     grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
 
+  /* Sidebar: compact card on mobile */
   .npm-sidebar {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: var(--space-md);
+    gap: 0;
   }
 
-  .npm-identity { text-align: center; }
+  /* Top row: photo + identity side by side */
+  .npm-sidebar-top {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
 
-  .npm-meta-list li { justify-content: center; }
+  .npm-avatar-wrap { margin-bottom: 0; }
 
-  .npm-social { flex-direction: row; justify-content: center; flex-wrap: wrap; }
+  .npm-avatar { width: 72px; height: 72px; border-radius: var(--radius-md); }
 
-  .npm-avatar { width: 100px; height: 100px; }
+  .npm-identity { text-align: left; margin-bottom: 0; }
+
+  .npm-fullname { font-size: 1rem; }
+
+  .npm-handle { font-size: 0.78rem; margin-bottom: 4px; }
+
+  .npm-status { font-size: 0.72rem; }
+
+  /* Meta list: 2-column grid */
+  .npm-meta-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 12px;
+  }
+
+  .npm-meta-list li {
+    font-size: 0.78rem;
+    justify-content: flex-start;
+  }
+
+  .npm-meta-list li span,
+  .npm-meta-list li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Social: horizontal row */
+  .npm-social {
+    flex-direction: row;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .npm-social-link {
+    flex: 1;
+    justify-content: center;
+    font-size: 0.82rem;
+    padding: 6px var(--space-sm);
+  }
+
+  /* Keywords: wrap tighter */
+  .npm-keywords .badges { gap: 4px; }
+  .npm-keywords .badge  { font-size: 0.72rem; padding: 2px 8px; }
 
   /* Hero name smaller on mobile */
   .hero-name { font-size: clamp(2.2rem, 10vw, 3.5rem); }
