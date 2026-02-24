@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rameswar — Full Stack Developer & Open Source Enthusiast. Portfolio showcasing projects, skills, and experience." />
+  <title>Rameswar | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">rameswar<span class="accent">.</span>dev</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="https://github.com/rameswar1234" target="_blank" rel="noopener" class="nav-cta">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content fade-in-up">
+      <p class="hero-greeting">Hey there, I'm</p>
+      <h1 class="hero-name">Rameswar</h1>
+      <p class="hero-title">Full Stack Developer &amp; Open Source Enthusiast</p>
+      <p class="hero-location">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        [City, Country]
+      </p>
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
+      <span class="scroll-arrow"></span>
+    </a>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title fade-in-up">About Me</h2>
+      <div class="about-grid fade-in-up">
+        <div class="about-photo-wrap">
+          <img
+            src="assets/profile.jpg"
+            alt="Photo of Rameswar"
+            onerror="this.onerror=null;this.src='assets/profile.svg'"
+            class="about-photo"
+            width="280"
+            height="280"
+          />
+        </div>
+        <div class="about-text">
+          <p>
+            I'm a passionate <strong>Full Stack Developer</strong> who loves building fast,
+            accessible, and user-friendly web applications. I enjoy turning complex
+            problems into clean, elegant solutions.
+          </p>
+          <p>
+            When I'm not coding, you'll find me exploring open-source projects,
+            contributing to the developer community, or learning about the latest
+            technologies. I believe in writing code that not only works but is also
+            readable, maintainable, and scalable.
+          </p>
+          <p>
+            I'm currently open to <strong>new opportunities</strong> — feel free to
+            reach out!
+          </p>
+          <div class="about-meta">
+            <div class="meta-item">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">[City, Country]</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">GitHub</span>
+              <a href="https://github.com/rameswar1234" target="_blank" rel="noopener" class="meta-value link">rameswar1234</a>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Status</span>
+              <span class="meta-value status-open">Open to Work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ────────────────────────────────────────────────── -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Skills &amp; Tech Stack</h2>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-card fade-in-up">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="skill-card-title">Frontend</h3>
+          <div class="badges">
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">React</span>
+            <span class="badge">Next.js</span>
+            <span class="badge">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card fade-in-up">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3 class="skill-card-title">Backend</h3>
+          <div class="badges">
+            <span class="badge">Node.js</span>
+            <span class="badge">Express</span>
+            <span class="badge">Python</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge">PostgreSQL</span>
+            <span class="badge">MongoDB</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card fade-in-up">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="skill-card-title">Tools &amp; DevOps</h3>
+          <div class="badges">
+            <span class="badge">Git</span>
+            <span class="badge">GitHub</span>
+            <span class="badge">Docker</span>
+            <span class="badge">VS Code</span>
+            <span class="badge">Linux</span>
+            <span class="badge">CI/CD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ──────────────────────────────────────────────── -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Projects</h2>
+      <p class="section-sub fade-in-up">A selection of things I've built</p>
+
+      <div class="projects-grid">
+
+        <!-- Project Card 1 -->
+        <article class="project-card fade-in-up">
+          <div class="project-card-header">
+            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            <div class="project-links">
+              <a href="https://github.com/rameswar1234" target="_blank" rel="noopener" aria-label="View source code on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="View live demo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Project Name One</h3>
+          <p class="project-desc">
+            A brief description of what this project does, the problem it solves,
+            and what makes it interesting. Replace with your actual project details.
+          </p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="project-card fade-in-up">
+          <div class="project-card-header">
+            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <div class="project-links">
+              <a href="https://github.com/rameswar1234" target="_blank" rel="noopener" aria-label="View source code on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="View live demo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Project Name Two</h3>
+          <p class="project-desc">
+            Another project description. Highlight key features, technologies used,
+            and your contribution. Keep it concise and impactful.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="project-card fade-in-up">
+          <div class="project-card-header">
+            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <div class="project-links">
+              <a href="https://github.com/rameswar1234" target="_blank" rel="noopener" aria-label="View source code on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="View live demo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Project Name Three</h3>
+          <p class="project-desc">
+            A third featured project. You can add more cards by duplicating this
+            article block. Aim for 3–6 projects that best represent your work.
+          </p>
+          <div class="project-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Tailwind</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="projects-more fade-in-up">
+        <a href="https://github.com/rameswar1234?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline">
+          View All on GitHub →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Get In Touch</h2>
+      <p class="section-sub fade-in-up">
+        Have a project in mind or just want to say hi? My inbox is always open.
+      </p>
+
+      <div class="contact-cards fade-in-up">
+
+        <a href="mailto:rameswar@email.com" class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <p class="contact-card-label">Email</p>
+            <p class="contact-card-value">rameswar@email.com</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/rameswar1234" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </div>
+          <div>
+            <p class="contact-card-label">GitHub</p>
+            <p class="contact-card-value">rameswar1234</p>
+          </div>
+        </a>
+
+        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div>
+            <p class="contact-card-label">LinkedIn</p>
+            <p class="contact-card-value">YOUR_LINKEDIN</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <p class="footer-text">
+        Designed &amp; built by <strong>Rameswar</strong>
+      </p>
+      <p class="footer-copy">
+        &copy; <span id="year"></span> — All rights reserved
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
