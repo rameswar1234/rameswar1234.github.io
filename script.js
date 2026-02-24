@@ -7,6 +7,119 @@
 (function () {
   'use strict';
 
+  /* ─── 0. SPIDER NET CANVAS BACKGROUND ────────────────────────── */
+  (function () {
+    var canvas  = document.getElementById('bg-canvas');
+    if (!canvas) return;
+    var ctx     = canvas.getContext('2d');
+    var mouse   = { x: -9999, y: -9999 };
+    var PARTICLE_COUNT = 90;
+    var CONNECT_DIST   = 140;   // max px between connected nodes
+    var MOUSE_DIST     = 180;   // mouse attraction radius
+    var SPEED          = 0.4;
+    var NODE_RADIUS    = 1.8;
+    var ACCENT         = '88, 166, 255'; // RGB of --color-accent
+
+    var particles = [];
+
+    function resize() {
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    function Particle() {
+      this.x    = Math.random() * canvas.width;
+      this.y    = Math.random() * canvas.height;
+      this.vx   = (Math.random() - 0.5) * SPEED;
+      this.vy   = (Math.random() - 0.5) * SPEED;
+      this.size = Math.random() * NODE_RADIUS + 0.8;
+    }
+
+    Particle.prototype.update = function () {
+      this.x += this.vx;
+      this.y += this.vy;
+      // Bounce off edges
+      if (this.x < 0 || this.x > canvas.width)  this.vx *= -1;
+      if (this.y < 0 || this.y > canvas.height)  this.vy *= -1;
+    };
+
+    function init() {
+      particles = [];
+      for (var i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function dist(ax, ay, bx, by) {
+      var dx = ax - bx, dy = ay - by;
+      return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Update + draw nodes
+      for (var i = 0; i < particles.length; i++) {
+        particles[i].update();
+        ctx.beginPath();
+        ctx.arc(particles[i].x, particles[i].y, particles[i].size, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(' + ACCENT + ', 0.7)';
+        ctx.fill();
+      }
+
+      // Draw edges between nearby particles
+      for (var i = 0; i < particles.length; i++) {
+        for (var j = i + 1; j < particles.length; j++) {
+          var d = dist(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
+          if (d < CONNECT_DIST) {
+            var alpha = (1 - d / CONNECT_DIST) * 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = 'rgba(' + ACCENT + ', ' + alpha + ')';
+            ctx.lineWidth   = 0.8;
+            ctx.stroke();
+          }
+        }
+
+        // Connect particle to mouse
+        var dm = dist(particles[i].x, particles[i].y, mouse.x, mouse.y);
+        if (dm < MOUSE_DIST) {
+          var ma = (1 - dm / MOUSE_DIST) * 0.9;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(mouse.x, mouse.y);
+          ctx.strokeStyle = 'rgba(' + ACCENT + ', ' + ma + ')';
+          ctx.lineWidth   = 1.2;
+          ctx.stroke();
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    // Track mouse
+    window.addEventListener('mousemove', function (e) {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    window.addEventListener('mouseleave', function () {
+      mouse.x = -9999;
+      mouse.y = -9999;
+    });
+
+    // Handle resize
+    window.addEventListener('resize', function () {
+      resize();
+      init();
+    });
+
+    resize();
+    init();
+    draw();
+  })();
+
   /* ─── 1. AUTO COPYRIGHT YEAR ──────────────────────────────────── */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

@@ -784,6 +784,29 @@ section:nth-child(even) {
   font-family: var(--font-mono);
 }
 
+/* ─── SPIDER NET CANVAS ──────────────────────────────────────────── */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+/* Ensure all content sits above the canvas */
+#navbar,
+section,
+footer,
+#scroll-progress,
+#cursor-spotlight,
+#back-to-top {
+  position: relative;
+  z-index: 1;
+}
+
 /* ─── SCROLL PROGRESS BAR ───────────────────────────────────────── */
 #scroll-progress {
   position: fixed;
